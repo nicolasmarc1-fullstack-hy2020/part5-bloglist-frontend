@@ -1,0 +1,41 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest/globals": true,
+    "cypress/globals": true 
+  },
+  "extends": [
+    "airbnb",
+    "react-app", 
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "prettier",
+    "prettier/react"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react", "jest", "cypress"
+  ], 
+  "rules": {
+     "semi": ["error", "never"],
+    //  gave up on lf conversion as git reconvert them to clrf, if fresh chaneg workspace eof and then git init with corecrlf false? or try
+    // https://superuser.com/questions/293941/rewrite-git-history-to-replace-all-crlf-to-lf
+    // https://stackoverflow.com/questions/9976986/force-lf-eol-in-git-repo-and-working-copy
+    // https://help.github.com/en/github/using-git/configuring-git-to-handle-line-endings
+     "linebreak-style": ["off", "windows"],
+     "react/prop-types": 0,
+     "react/button-has-type": 0,
+     "comma-dangle":"off",
+     "eol-last":"off",
+     "no-alert":"off",
+     "prefer-destructuring":"off",
+     "no-multiple-empty-lines": ["error", { "max": 2, "maxEOF": 0 }]
+  }
+}
